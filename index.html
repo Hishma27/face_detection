@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+          body 
+.moving-heading {
+  animation: move-left-right 2s ease-in-out infinite;
+  width: fit-content;
+  margin: 0 auto;
+    font-family: Lucida Handwriting, Cursive;
+    color: rgb(9, 9, 9);
+}
+.navbar{
+  background-color: var(--bg-main);
+  color: var(--bg-primary);
+}
+
+@keyframes move-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+</style>
+
+
+
+
+    <meta charset="UTF-8">
+    <title>FACE RECOGNITION</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!-- As a link -->
+<header>
+  <nav class="navbar navbar-dark-bg-secondary">
+    <span class="navbar-brand mb-0 h1">FACE RECOGNITION</span>
+    
+  </nav>
+</header>
+<br>
+ <div class="mx-auto" style="width: 700px;">
+  <img src="{{ url_for('video_feed') }}">
+</div>
+
+<br><br>
+<div class="mx-auto" style="width: 150px;">
+  <a href="http://127.0.0.1:5000/">
+   <button type="button" class="btn btn-info">Upload New Image</button>
+</a>
+</div>
+<script>
+  var audio = new Audio('C:\Users\Lenovo\Desktop\Face-Recognition-Criminals\sound.mp3'); // Change the path to your alert sound file
+  audio.play();
+</script>
+<br><br><br><br><br><br><br>
+</body>
+
+</html>
